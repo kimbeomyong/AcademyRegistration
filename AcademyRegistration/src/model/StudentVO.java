@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class StudentVO {
 	private int no;// 학생일련번호
 	private String sd_num;// 학번
@@ -121,6 +123,20 @@ public class StudentVO {
 
 	public void setSd_date(String sd_date) {
 		this.sd_date = sd_date;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.no, this.sd_num, this.sd_name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof StudentVO)) {
+			return false;
+		}
+		StudentVO studentVO = (StudentVO)obj;
+		return this.no == no && this.sd_num.equals(sd_num) && this.sd_name.equals(sd_name);
 	}
 
 }

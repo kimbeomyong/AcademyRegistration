@@ -129,15 +129,15 @@ public class UniversityRegisterCoursesMain {
 		switch (choice) {
 		case STUDENT_CHOICE.INSERT:// view.package>>STUDENT_CHOICE interface>> insert = 1
 			System.out.println("");
-			// studnetManager.studnetRegistr();
+			 studnetManager.studnetRegistr();
 			break;
 		case STUDENT_CHOICE.UPDATE:// view.package>>STUDENT_CHOICE interface>> update = 2
 			System.out.println("");
-			// studnetManager.studnetUpdate();
+			 studnetManager.studnetUpdate();
 			break;
 		case STUDENT_CHOICE.LIST:// view.package>>STUDENT_CHOICE interface>> list = 3
 			System.out.println("");
-			// studnetManager.studnetTotalList();
+			 studnetManager.studnetTotalList();
 			break;
 		case STUDENT_CHOICE.MAIN:// view.package>>STUDENT_CHOICE interface>> main = 4
 			return;
