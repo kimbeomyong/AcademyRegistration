@@ -157,23 +157,23 @@ public class UniversityRegisterCoursesMain {
 		MenuViewer.choice.nextLine();// 입력버퍼클리어
 
 		switch (choice) {
-		case SUBJECT_CHOICE.LIST:
+		case SUBJECT_CHOICE.LIST:// view.package>>SUBJECT_CHOICE interface>> list = 1
 			System.out.println("");
 			// SubjectRegisterManager.subjectList();
 			break;
-		case SUBJECT_CHOICE.INSERT:
+		case SUBJECT_CHOICE.INSERT:// view.package>>SUBJECT_CHOICE interface>> insert = 2 
 			System.out.println("");
 			// subjectManager.subjectRegistr();
 			break;
-		case SUBJECT_CHOICE.UPDATE:
+		case SUBJECT_CHOICE.UPDATE:// view.package>>SUBJECT_CHOICE interface>>  update = 3	
 			System.out.println("");
 			// subjectManager.subjectUpdate();
 			break;
-		case SUBJECT_CHOICE.DELETE:
+		case SUBJECT_CHOICE.DELETE:// view.package>>SUBJECT_CHOICE interface>> delete = 4
 			System.out.println("");
 			// subjectManager.subjectDelete();
 			break;
-		case SUBJECT_CHOICE.MAIN:
+		case SUBJECT_CHOICE.MAIN:// view.package>>SUBJECT_CHOICE interface>> main = 5
 			return;
 		default:
 			System.out.println("해당 메뉴 번호만 입력하세요.");
