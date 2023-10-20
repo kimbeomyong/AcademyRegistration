@@ -56,7 +56,7 @@ public class UniversityRegisterCoursesMain {
 	// 수강 신청 메뉴
 	public static void traineeMenu() throws Exception{
 		int choice;// switch 문에 case 선택할때 사용
-		// TraineeRegisterManager traineeManager = new TraineeRegisterManager();
+        // TraineeRegisterManager traineeManager = new TraineeRegisterManager();
 		// 메인메뉴 화면출력
 		MenuViewer.traineeMenuView();// view.package>>TRAINEE_CHOICE.class>>traineeMenuView()
 		// 키보드로 입력
@@ -159,19 +159,19 @@ public class UniversityRegisterCoursesMain {
 		switch (choice) {
 		case SUBJECT_CHOICE.LIST:// view.package>>SUBJECT_CHOICE interface>> list = 1
 			System.out.println("");
-			// SubjectRegisterManager.subjectList();
+			subjectManager.subjectList();
 			break;
 		case SUBJECT_CHOICE.INSERT:// view.package>>SUBJECT_CHOICE interface>> insert = 2 
 			System.out.println("");
-			// subjectManager.subjectRegistr();
+			 subjectManager.subjectRegistr();
 			break;
 		case SUBJECT_CHOICE.UPDATE:// view.package>>SUBJECT_CHOICE interface>>  update = 3	
 			System.out.println("");
-			// subjectManager.subjectUpdate();
+			 subjectManager.subjectUpdate();
 			break;
 		case SUBJECT_CHOICE.DELETE:// view.package>>SUBJECT_CHOICE interface>> delete = 4
 			System.out.println("");
-			// subjectManager.subjectDelete();
+			 subjectManager.subjectDelete();
 			break;
 		case SUBJECT_CHOICE.MAIN:// view.package>>SUBJECT_CHOICE interface>> main = 5
 			return;

@@ -16,6 +16,12 @@ public class SubjectVO {
 		this.s_num = s_num;
 		this.s_name = s_name;
 	}
+	
+	public SubjectVO(String s_num, String s_name) {
+		super();
+		this.s_num = s_num;
+		this.s_name = s_name;
+	}
 
 	// getter,setter
 	public int getNo() {
