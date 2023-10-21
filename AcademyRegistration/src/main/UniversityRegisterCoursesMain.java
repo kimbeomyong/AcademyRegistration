@@ -15,7 +15,8 @@ public class UniversityRegisterCoursesMain {
 	public static void main(String[] args) {
 		mainmenu();
 	}// main
-	//main mathod
+		// main mathod
+
 	public static void mainmenu() {
 		int choiceNum;// switch 문에 case 선택할때 사용
 		boolean stopFlag = false;// 무한루프 탈출
@@ -53,10 +54,11 @@ public class UniversityRegisterCoursesMain {
 			} // catch
 		} // while
 	}// mainmenu method
-	// 수강 신청 메뉴
-	public static void traineeMenu() throws Exception{
+		// 수강 신청 메뉴
+
+	public static void traineeMenu() throws Exception {
 		int choice;// switch 문에 case 선택할때 사용
-        // TraineeRegisterManager traineeManager = new TraineeRegisterManager();
+		// TraineeRegisterManager traineeManager = new TraineeRegisterManager();
 		// 메인메뉴 화면출력
 		MenuViewer.traineeMenuView();// view.package>>TRAINEE_CHOICE.class>>traineeMenuView()
 		// 키보드로 입력
@@ -82,8 +84,9 @@ public class UniversityRegisterCoursesMain {
 			System.out.println("해당 메뉴 번호만 입력하세요.");
 		}
 	}// traineeMenu method
-	// 과목 메뉴
-	public static void lessonMenu() throws Exception{
+		// 과목 메뉴
+
+	public static void lessonMenu() throws Exception {
 		int choice;// switch 문에 case 선택할때 사용
 
 		LessonRegisterManager lessonManager = new LessonRegisterManager();
@@ -96,19 +99,19 @@ public class UniversityRegisterCoursesMain {
 		switch (choice) {
 		case LESSON_CHOICE.LIST:// view.package>>LESSON_CHOICE interface>> list = 1
 			System.out.println("");
-			// lessonManager.lessonList();
+			lessonManager.lessonList();
 			break;
 		case LESSON_CHOICE.INSERT:// view.package>>LESSON_CHOICE interface>> insert = 2
 			System.out.println("");
-			// lessonManager.lessonRegistr();
+			lessonManager.lessonRegistr();
 			break;
 		case LESSON_CHOICE.UPDATE:// view.package>>LESSON_CHOICE interface>> update = 3
 			System.out.println("");
-			// lessonManager.lessonUpdate();
+			lessonManager.lessonUpdate();
 			break;
 		case LESSON_CHOICE.DELETE:// view.package>>LESSON_CHOICE interface>> delete = 4
 			System.out.println("");
-			// lessonManager.lessonDelete();
+			lessonManager.lessonDelete();
 			break;
 		case LESSON_CHOICE.MAIN:// view.package>>LESSON_CHOICE interface>> main = 5
 			return;
@@ -116,8 +119,9 @@ public class UniversityRegisterCoursesMain {
 			System.out.println("해당 메뉴 번호만 입력하세요.");
 		}
 	}// lessonMenu method
-	// 학생 메뉴
-	public static void studentMenu() throws Exception{
+		// 학생 메뉴
+
+	public static void studentMenu() throws Exception {
 		int choice;// switch 문에 case 선택할때 사용
 		StudentRegisterManager studnetManager = new StudentRegisterManager();
 		// 메인메뉴 화면 출력
@@ -125,27 +129,28 @@ public class UniversityRegisterCoursesMain {
 		// 키보드로 입력
 		choice = MenuViewer.choice.nextInt();// view.package>>MenuViewer.class>>Scanner 입력받기
 		MenuViewer.choice.nextLine();// 입력버퍼클리어
-		
+
 		switch (choice) {
 		case STUDENT_CHOICE.INSERT:// view.package>>STUDENT_CHOICE interface>> insert = 1
 			System.out.println("");
-			 studnetManager.studnetRegistr();
+			studnetManager.studnetRegistr();
 			break;
 		case STUDENT_CHOICE.UPDATE:// view.package>>STUDENT_CHOICE interface>> update = 2
 			System.out.println("");
-			 studnetManager.studnetUpdate();
+			studnetManager.studnetUpdate();
 			break;
 		case STUDENT_CHOICE.LIST:// view.package>>STUDENT_CHOICE interface>> list = 3
 			System.out.println("");
-			 studnetManager.studnetTotalList();
+			studnetManager.studnetTotalList();
 			break;
 		case STUDENT_CHOICE.MAIN:// view.package>>STUDENT_CHOICE interface>> main = 4
 			return;
 		default:
 			System.out.println("해당 메뉴 번호만 입력하세요.");
-		}//switch
+		}// switch
 	}// studentManu method
-	// 학과 메뉴
+		// 학과 메뉴
+
 	public static void subjectMenu() throws Exception {
 		int choice;// switch 문에 case 선택할때 사용
 
@@ -161,22 +166,22 @@ public class UniversityRegisterCoursesMain {
 			System.out.println("");
 			subjectManager.subjectList();
 			break;
-		case SUBJECT_CHOICE.INSERT:// view.package>>SUBJECT_CHOICE interface>> insert = 2 
+		case SUBJECT_CHOICE.INSERT:// view.package>>SUBJECT_CHOICE interface>> insert = 2
 			System.out.println("");
-			 subjectManager.subjectRegistr();
+			subjectManager.subjectRegistr();
 			break;
-		case SUBJECT_CHOICE.UPDATE:// view.package>>SUBJECT_CHOICE interface>>  update = 3	
+		case SUBJECT_CHOICE.UPDATE:// view.package>>SUBJECT_CHOICE interface>> update = 3
 			System.out.println("");
-			 subjectManager.subjectUpdate();
+			subjectManager.subjectUpdate();
 			break;
 		case SUBJECT_CHOICE.DELETE:// view.package>>SUBJECT_CHOICE interface>> delete = 4
 			System.out.println("");
-			 subjectManager.subjectDelete();
+			subjectManager.subjectDelete();
 			break;
 		case SUBJECT_CHOICE.MAIN:// view.package>>SUBJECT_CHOICE interface>> main = 5
 			return;
 		default:
 			System.out.println("해당 메뉴 번호만 입력하세요.");
-		}//switch
+		}// switch
 	}// subjectMenu method
 }// class
