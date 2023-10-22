@@ -3,6 +3,7 @@ package main;
 import controller.LessonRegisterManager;
 import controller.StudentRegisterManager;
 import controller.SubjectRegisterManager;
+import controller.TraineeRegisterManager;
 import view.LESSON_CHOICE;
 import view.MENU_CHOICE;
 import view.MenuViewer;
@@ -15,8 +16,6 @@ public class UniversityRegisterCoursesMain {
 	public static void main(String[] args) {
 		mainmenu();
 	}// main
-		// main mathod
-
 	public static void mainmenu() {
 		int choiceNum;// switch 문에 case 선택할때 사용
 		boolean stopFlag = false;// 무한루프 탈출
@@ -58,7 +57,7 @@ public class UniversityRegisterCoursesMain {
 
 	public static void traineeMenu() throws Exception {
 		int choice;// switch 문에 case 선택할때 사용
-		// TraineeRegisterManager traineeManager = new TraineeRegisterManager();
+		TraineeRegisterManager traineeManager = new TraineeRegisterManager();
 		// 메인메뉴 화면출력
 		MenuViewer.traineeMenuView();// view.package>>TRAINEE_CHOICE.class>>traineeMenuView()
 		// 키보드로 입력
@@ -68,15 +67,15 @@ public class UniversityRegisterCoursesMain {
 		switch (choice) {
 		case TRAINEE_CHOICE.LIST:// view.package>>TRAINEE_CHOICE interface>> list = 1
 			System.out.println("");
-			// traineeManager.traineeList();
+			traineeManager.traineeList();
 			break;
 		case TRAINEE_CHOICE.INSERT:// view.package>>TRAINEE_CHOICE interface>> insert = 1
 			System.out.println("");
-			// traineeManager.traineeRegistr();
+			traineeManager.traineeRegistr();
 			break;
 		case TRAINEE_CHOICE.UPDATE:// view.package>>TRAINEE_CHOICE interface>> list = 1
 			System.out.println("");
-			// traineeManager.traineeDelete();
+			traineeManager.traineeDelete();
 			break;
 		case TRAINEE_CHOICE.MAIN:// view.package>>TRAINEE_CHOICE interface>> list = 1
 			return;
